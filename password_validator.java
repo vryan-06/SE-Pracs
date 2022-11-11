@@ -4,19 +4,18 @@ import java.util.*;
 class password_validator{
     public static boolean validate(String pwd)
     {
-        String regex = "password1";
-  
-        Pattern p = Pattern.compile(regex);
-        // System.out.println(p);
-  
+        String password = "password1";
+        
         if (pwd == null) {
             return false;
         }
   
-        Matcher m = p.matcher(pwd);
-        // System.out.println(m);
- 
-        return m.matches();
+        if(pwd.matches(password)){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
     
     public static void main(String[] args){
